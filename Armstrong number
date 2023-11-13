@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.math.*; 
+
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n=sc.nextInt();
+   int t,r=0,rem;
+   t=n;
+   while(t!=0)
+   {
+       rem=t%10;
+       r+=Math.pow(rem,4);
+       t/=10;
+       
+   }
+   if(r==n)
+   {
+       System.out.print("yes");
+   }
+   else{
+       System.out.print("no");
+   }
+  }
+}
