@@ -1,0 +1,38 @@
+/*Note*/
+Method 1 
+While getting character a user input use
+sc.next().charAt(0)
+/*************************************************************/
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      char n=sc.next().charAt(0);
+      if(n=='a'||n=='e'||n=='i'||n=='o'||n=='u')
+      {
+          System.out.print("yes");
+      }
+      else{
+          System.out.print("no");
+      }
+  }
+}
+/*************************************************************/
+METHOD 2 :
+Using indexOf() function
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      char n=sc.next().charAt(0);
+      String sen="aeiouAEIOU";
+      if (sen.indexOf(n)!=-1) {
+          System.out.print("Vowels");
+      }
+      else{
+          System.out.print("no");
+      }
+  }
+}
