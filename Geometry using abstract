@@ -1,0 +1,32 @@
+import java.io.*;
+
+abstract class geometry{
+    abstract void rect(int h,int l);
+    abstract void square(int s);
+    abstract void circle(int r);
+
+}
+class maths extends geometry{
+    public void rect(int h,int l)
+    {
+        int area=h*l;
+        System.out.println(area);
+    }
+    public void square(int s)
+    {
+        int area=s*s;
+        System.out.println(area);
+    }
+    public void circle(int r)
+    {
+        int area=r*r;
+        System.out.println(area);
+    }
+
+public static void main(String[] args){
+    maths obj=new maths();
+    obj.rect(11,12);
+     obj.square(11);
+      obj.circle(11);
+}
+}
