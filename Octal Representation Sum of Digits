@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+      
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int[] oct=new int[100];
+      int i=0,s=0;
+      while(n!=0)
+      {
+        oct[i]=n%8;
+        n=n/8;
+        i++;
+      }
+      for(int j=i-1;j>=0;j--)
+      {
+        s+=oct[j];
+       
+        
+      }
+       System.out.print(s);
+      
+     
+    }
+}
