@@ -15,3 +15,25 @@ public class HelloWorld {
         
     }
 }
+
+
+
+import java.util.*;
+class string{
+    public static void printwords(String s)
+    {
+        for(String i:s.split(" "))
+        {
+            if(i.length()%2==0)
+            {
+                System.out.println(i);
+            }
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        printwords(s);
+    }
+}
