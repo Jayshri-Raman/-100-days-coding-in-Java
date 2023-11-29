@@ -1,0 +1,13 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+public class Hello{
+    public static void main(String args[])
+    {
+       Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      char a =sc.next().charAt(0);
+      String news=s+a;
+      System.out.print(news);
+    }
+}
