@@ -1,0 +1,12 @@
+
+import java.util.Arrays;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="jaiajsjdk";
+        char arr[]=s.toCharArray(); //convert string to char array
+        Arrays.sort(arr);
+        s=new String(arr); convert char array to string
+        System.out.print(s);
+    }
+}
