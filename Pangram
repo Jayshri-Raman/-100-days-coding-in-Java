@@ -1,0 +1,25 @@
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="qazxswedcvfrtgbnhyjujkiolpm";
+        String str=s.toLowerCase();
+        int f=1;
+        for(char i='a';i<='z';i++)
+        {
+            if(!str.contains(String.valueOf(i)))
+            {
+                f=0;
+                break;
+            }
+        }
+            if(f==0)
+            {
+                System.out.print("no");
+            }
+            else{
+                System.out.print("yes");
+            }
+        
+    }
+}
