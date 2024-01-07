@@ -1,0 +1,21 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int n[]=new int[]{12,34,56,77,84,33};
+        int s=n[0];
+        int h=n[0];
+        for(int i=1;i<n.length;i++)
+        {
+            if(n[i]>h)
+            {
+                h=n[i];
+            }
+            else if(n[i]<s)
+            {
+                s=n[i];
+            }
+        }
+            System.out.println(h);
+            System.out.println(s);
+       
+    }
+}
