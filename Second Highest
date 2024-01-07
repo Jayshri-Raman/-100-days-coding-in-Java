@@ -1,0 +1,23 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int num[]={10,5,30,70};
+        int h=0;
+        int s=0;
+        for(int i:num){
+            if(h<i)
+            {
+                s=h;
+                h=i;
+            }
+            else if(s<i)
+            {
+                s=i;
+            }
+        }
+       
+            System.out.println(h);
+             System.out.print(s);
+       
+       
+    }
+}
