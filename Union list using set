@@ -1,0 +1,36 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        TreeSet<Integer> set=new TreeSet();
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        int m=sc.nextInt();
+        int[] arr2=new int[m];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<m;i++){
+            arr2[i]=sc.nextInt();
+        }
+        for(int j:arr)
+        {
+            set.add(j);
+        }
+        for(int k:arr2)
+        {
+            set.add(k);
+        }
+        ArrayList<Integer> list=new ArrayList<>();
+        for(int i:set)
+        {
+            list.add(i);
+        }
+            System.out.print(list);
+        
+       
+    }
+}
