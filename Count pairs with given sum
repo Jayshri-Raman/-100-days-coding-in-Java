@@ -1,0 +1,32 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        // Taking input until there are integers
+        while (sc.hasNextInt()) {
+            list.add(sc.nextInt());
+        }
+        
+        Integer[] arr = list.toArray(new Integer[0]);
+        int c = 0;
+        int n = arr.length;
+        
+        // Reading an additional integer 'k'
+        int k = sc.nextInt();
+        
+        // Counting pairs whose sum is equal to 'k'
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] + arr[j] == k) {
+                    c++;
+                }
+            }
+        }
+        
+        // Printing the count of pairs
+        System.out.print(c);
+    }
+}
