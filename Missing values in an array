@@ -1,0 +1,25 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        while (sc.hasNextInt()) {
+            list.add(sc.nextInt());
+        }
+        
+        Integer[] arr = list.toArray(new Integer[0]);
+        int n=arr.length+1;
+        int as=0;
+        int es=(n*(n+1))/2;
+        for(int i:arr)
+        {
+            as=as+i;
+        }
+        int m=es-as;
+        System.out.print(m);
+    }
+}
+
+formula :: (n*(n+1))/2
