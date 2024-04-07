@@ -1,0 +1,57 @@
+Approach:
+
+Initialization:
+
+Use two pointers, left pointing to the beginning (start) of the array (0) and right pointing to the end of the array (n-1).
+Calculating Water Trapped:
+
+Calculate the water trapped between the lines at height[left] and height[right].
+Water trapped is determined by the minimum of the heights (minHeight) between the two lines multiplied by the distance (width) between them (which is right - left).
+Update the maximum water trapped found so far (maxWater).
+Move Pointers:
+
+If height[left] < height[right], move left pointer to the right (left++) to potentially find a taller line.
+Otherwise, move right pointer to the left (right--) to potentially find a taller line.
+Termination:
+
+Continue the above steps until the left pointer is less than the right pointer.
+At this point, maxWater will contain the maximum amount of water that can be trapped between two lines.
+
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int maxwater=0;
+        int left=0;
+        int right=n-1;
+        while(left<right)
+        {
+            int width=right-left;
+            int minHe=Math.min(arr[left],arr[right]);
+            int curr=width*minHe;
+        
+        if(curr>maxwater)
+        {
+            maxwater=curr;
+        }
+        if(arr[left]<arr[right])
+        {
+            left++;
+            
+        }
+        else{
+            right--;
+        }
+        }
+        System.out.print(maxwater);
+
+    }
+}
